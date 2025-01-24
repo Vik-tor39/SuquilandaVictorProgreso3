@@ -8,6 +8,7 @@ namespace SuquilandaVictorProgreso3
 {
     internal interface IAeropuertoRepository
     {
-        void SaveAeropuerto(Aeropuerto aeropuerto);
+        void GuardarArepuerto(Arepuerto arepuerto, string vsuquilanda);
+        List<Arepuerto> ObtenerArepuertos();
     }
 }
