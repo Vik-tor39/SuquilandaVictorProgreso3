@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,7 +35,23 @@ namespace SuquilandaVictorProgreso3
         private async Task searchAeropuerto()
         {
             using var client = new HttpClient();
-            var url  = $"https://api.openweathermap.org/data/2.5/weather?q={SearchQuery}&appid=4b3
+            var url  = $"https://freetestapi.com/api/v1/airports?search={SearchQuery}";
+            var response = await client.GetFromJsonAsync<List<Arepuerto>>(url);
+            if (response == null || response.Any())
+            {
+                var aeropuerto = response.First();
+                _repo.GuardarArepuerto(aeropuerto, "VSuquilanda");
+                SearchResult = $"Name: {aeropuerto.Name}, " +
+                    $"Country: {aeropuerto.Country}, " +
+                    $"Latitude: {aeropuerto.Latitude}, " +
+                    $"Longitude: {aeropuerto.Longitude}, " +
+                    $"Email: {aeropuerto.email}, " +
+                    $"VSuquilanda: {aeropuerto.VSuquilanda}";
+            }
+            else
+            {
+                SearchResult = "No results found";
+            }
         }
     }
 }
