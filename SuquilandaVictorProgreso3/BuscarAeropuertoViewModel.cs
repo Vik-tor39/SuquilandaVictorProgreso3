@@ -30,14 +30,14 @@ namespace SuquilandaVictorProgreso3
         {
             _repo = repo;
             SearchCommand = new Command(async () => await searchAeropuerto());
-            ClearCommand = new Command(async () => SearchQuery = string.Empty);
+            ClearCommand = new Command(() => SearchQuery = string.Empty);
         }
         private async Task searchAeropuerto()
         {
             using var client = new HttpClient();
             var url  = $"https://freetestapi.com/api/v1/airports?search={SearchQuery}";
             var response = await client.GetFromJsonAsync<List<Arepuerto>>(url);
-            if (response == null || response.Any())
+            if (response == null && response.Any())
             {
                 var aeropuerto = response.First();
                 _repo.GuardarArepuerto(aeropuerto, "VSuquilanda");

@@ -6,13 +6,11 @@
     xmlns:local="clr-namespace:SuquilandaVictorProgreso3"
     Shell.FlyoutBehavior="Disabled"
     Title="SuquilandaVictorProgreso3">
-     <!--
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:Page1}"
         Route="MainPage" />
-    -->
-
+    <!--
     <TabBar>
         <Tab Title="Buscar Aeropuerto" Icon="search.png">
             <ShellContent ContentTemplate="{DataTemplate local:BuscarAeropuerto}" />
@@ -20,4 +18,5 @@
         <Tab Title="Acerca de" Icon="about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AcercaDe}" />
         </Tab>
+    -->
 </Shell>

@@ -22,6 +22,8 @@
         <Label
             x:Name="vsuquilanda_label1"
             Text="{Binding SearchResult}"
+            VerticalOptions="CenterAndExpand"
+            TextColor="White"
             />
     </VerticalStackLayout>
 </ContentPage>
