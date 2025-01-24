@@ -53,8 +53,7 @@ namespace SuquilandaVictorProgreso3
                                    $"Country: {aeropuerto.Country}, " +
                                    $"Latitude: {aeropuerto.Latitude}, " +
                                    $"Longitude: {aeropuerto.Longitude}, " +
-                                   $"Email: {aeropuerto.email}, " +
-                                   $"VSuquilanda: {aeropuerto.VSuquilanda}";
+                                   $"Email: {aeropuerto.email}";
                 }
                 else
                 {
