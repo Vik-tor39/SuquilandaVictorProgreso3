@@ -18,4 +18,8 @@ namespace SuquilandaVictorProgreso3
         public string email { get; set; }
         public string VSuquilanda { get; set; }
     }
+    public class AeropuertoDisplay
+    {
+        public string DisplayText { get; set; }
+    }
 }
