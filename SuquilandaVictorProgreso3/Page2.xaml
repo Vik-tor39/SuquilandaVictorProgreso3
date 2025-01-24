@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SuquilandaVictorProgreso3.Page2"
+             BackgroundColor="#34495E"
              Title="Víctor Suquilanda">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="20" VerticalOptions="FillAndExpand" Spacing="20">
         <ListView
             x:Name="vsuquilanda_listview"
             ItemsSource="{Binding Aeropuertos}">
