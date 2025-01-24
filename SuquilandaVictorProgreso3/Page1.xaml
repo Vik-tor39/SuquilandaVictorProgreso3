@@ -4,9 +4,24 @@
              x:Class="SuquilandaVictorProgreso3.Page1"
              Title="Page1">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Entry
+            x:Name="vsuquilanda_entry1"
+            Placeholder="Ingresa el aeropuerto a buscar"
+            Text="{Binding SearchQuery}"
+            />
+        <Button
+            x:Name="vsuquilanda_button1"
+            Text="Buscar"
+            Command="{Binding SearchCommand}"
+            />
+        <Button
+            x:Name="vsuquilanda_button2"
+            Text="Limpiar"
+            Command="{Binding ClearCommand}"
+            />
+        <Label
+            x:Name="vsuquilanda_label1"
+            Text="{Binding SearchResult}"
+            />
     </VerticalStackLayout>
 </ContentPage>
